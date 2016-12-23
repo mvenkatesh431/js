@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Leap Year Program</title>
+  </head>
+  <body>
+    <input type="text" id="year" >
+    <button type="button" name="button" onclick="leapyear()">Submit</button>
+    <p id="r"></p>
+  </body>
+  <script type="text/javascript">
+
+    function leapyear() {
+      var givenyear;
+      givenyear = document.getElementById('year').value;
+
+      if (givenyear%400 == 0) {
+        document.getElementById('r').innerHTML = givenyear + " is a Leap Year !";
+      }else if (givenyear%100 == 0) {
+        document.getElementById('r').innerHTML = givenyear + " is not a Leap Year !";
+      }else if (givenyear%4 == 0) {
+        document.getElementById('r').innerHTML = givenyear + " is a Leap Year !";
+      }else {
+        document.getElementById('r').innerHTML = givenyear + " is not a Leap Year !";
+      }
+    }
+
+  </script>
+</html>

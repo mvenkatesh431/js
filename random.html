@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Random Number Guess</title>
+  </head>
+  <body>
+    <input type="text" id="input" >
+    <button type="button" name="button" onclick="submit()">Submit</button>
+    <p id='output'></p>
+    <script type="text/javascript">
+
+    function submit() {
+      var input = document.getElementById('input').value;
+      input = parseInt(input);
+      var randomNum =  Math.floor( Math.random()*10);
+
+      if (input === randomNum) {
+        document.getElementById('output').innerHTML=" Good Work !! Random number " +randomNum + " and Given Number " + input + " Are Matched !!";
+      }
+      else {
+        document.getElementById('output').innerHTML="Try Again.. ;) Random number " +randomNum + " and Given Number " + input + " Are Not Matched !!";
+      }
+    }
+    </script>
+
+
+  </body>
+</html>
