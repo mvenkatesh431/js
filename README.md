@@ -1,2 +1,2 @@
 # Java Script Practices
-My JavaScript Experiments and Practices.
+Newbie JavaScript Experiments and Practices.
