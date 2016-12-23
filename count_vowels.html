@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Change the first letter case</title>
+  </head>
+  <body>
+    <input type="text" name="input" id="input">
+    <button type="button" name="button" onclick="submit()">submit</button>
+    <p id="result"></p>
+
+    <script type="text/javascript">
+    function check() {
+
+    }
+
+    function submit() {
+      var input = document.getElementById('input').value;
+      var result = document.getElementById('result');
+
+      var inputArr = input.split('');
+      var vowel_list = 'aeiouAEIOU';
+      var count = 0;
+
+      for (var i = 0; i < inputArr.length; i++) {
+        if (vowel_list.indexOf(inputArr[i]) !== -1) {
+          count++;
+        }
+      }
+
+      result.innerHTML = "Number of Vowels in Given String  " + input + " is " + count;
+    }
+    </script>
+  </body>
+</html>
