@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Change the first letter case</title>
+  </head>
+  <body>
+    <input type="text" name="input" id="input">
+    <button type="button" name="button" onclick="submit()">submit</button>
+    <p id="result"></p>
+
+    <script type="text/javascript">
+    function submit() {
+      var input = document.getElementById('input').value;
+      var result = document.getElementById('result');
+
+      var words = input.split(' ');
+      var newArray = [];
+      for (var i = 0; i < words.length; i++) {
+        newArray.push(words[i].charAt(0).toUpperCase()+words[i].slice(1));
+      }
+      newArray = newArray.join(' ');
+      result.innerHTML = "Modified Array : " + newArray;
+    }
+    </script>
+  </body>
+</html>
