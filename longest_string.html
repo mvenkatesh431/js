@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Change the first letter case</title>
+  </head>
+  <body>
+    <input type="text" name="input" id="input">
+    <button type="button" name="button" onclick="submit()">submit</button>
+    <p id="result"></p>
+
+    <script type="text/javascript">
+    function check() {
+
+    }
+
+    function submit() {
+      var input = document.getElementById('input').value;
+      var result = document.getElementById('result');
+
+      var words = input.split(' ');
+      var Maxlength = 0;
+      var Maxword = 0;
+
+      for (var i = 0; i < words.length; i++) {
+        if (words[i].length > Maxlength) {
+          Maxlength = words[i].length;
+          Maxword = words[i];
+        }
+      }
+
+      result.innerHTML = "Largest Word is : " + Maxword + " with the lenght " + Maxlength;
+    }
+    </script>
+  </body>
+</html>
