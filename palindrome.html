@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Reverse Number</title>
+  </head>
+  <body>
+    <input type="text" name="input" id="input">
+    <button type="b̥utton" name="button" onclick="submit()">Reverse Me !! </button>
+    <p id='result'></p>
+
+    <script type="text/javascript">
+          // javascript Code now.̥
+          function submit() {
+            var input = document.getElementById('input').value;
+            var result = document.getElementById('result');
+            var reverse = input.split("").reverse().join("");
+
+            if (input === reverse) {
+              result.innerHTML = input + " is Palindrome ";
+            } else {
+              result.innerHTML = input + " is not a Palindrome "
+            }
+          }
+    </script>
+
+  </body>
+</html>

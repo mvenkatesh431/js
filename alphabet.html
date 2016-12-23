@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Alphabets</title>
+  </head>
+  <body>
+    <input type="text" name="input" id="input">
+    <button type="button" name="button" onclick="submit()">Submit</button>
+    <p id='result'></p>
+
+    <script type="text/javascript">
+
+      function submit() {
+        var input = document.getElementById('input').value;
+        var result = document.getElementById('result');
+        var sortedString = input.split('').sort().join('');
+        // var arr = input.split('');
+        // console.log(input);
+        // console.log(arr);
+        // var sortedArr = arr.sort();
+        // console.log(sortedArr);
+        // var sortedString = sortedArr.join('');
+        // console.log(sortedString);
+        result.innerHTML = "Sorted String is : " + sortedString;
+      }
+    </script>
+
+  </body>
+</html>
